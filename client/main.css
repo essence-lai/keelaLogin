@@ -1,0 +1,9 @@
+Header a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+Header a, #login-buttons a {
+    text-decoration: none;
+    margin-right: 10px;
+    color:inherit;
+}
