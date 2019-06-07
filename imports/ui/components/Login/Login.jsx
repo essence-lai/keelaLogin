@@ -6,7 +6,7 @@ export default class Login extends React.Component{
             <div className={"container"}>
                 {/*[if IE 9]>         <html class="ie9 no-focus"> <![endif]*/}
                 {/*[if gt IE 9]><!*/}  {/*<![endif]*/}
-                <meta charSet="utf-8" />
+                {/*<meta charSet="utf-8" />
 
                 <title>OneUI - Admin Dashboard Template &amp; UI Framework</title>
 
@@ -15,16 +15,15 @@ export default class Login extends React.Component{
                 <meta name="robots" content="noindex, nofollow" />
                 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0" />
 
-
-
+                <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700"/>
+*/}
                 {/* Stylesheets */}
-                {/* Web fonts */}
-                <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700" />
 
 
                 {/* You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: */}
                 {/* <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> */}
                 {/* END Stylesheets */}
+                {/* Bootstrap and OneUI CSS framework */}
 
                 {/* Login Content */}
                 <div className="content overflow-hidden">
@@ -77,7 +76,7 @@ export default class Login extends React.Component{
                                         </div>
                                         <div className="form-group">
                                             <div className="col-xs-12 col-sm-6 col-md-4">
-                                                <button className="btn btn-block btn-primary" type="submit"><i className="si si-login pull-right" /> Log in</button>
+                                                <button className="btn btn-block btn-primary" type="submit">Log in</button>
                                             </div>
                                         </div>
                                     </form>

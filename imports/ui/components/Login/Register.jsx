@@ -1,31 +1,95 @@
 import React from 'react';
-
+import { Redirect } from 'react-router-dom'
 
 export default class Register extends React.Component{
+    constructor(){
+        super();
+        this.setRedirect = this.setRedirect.bind.this;
+        this.renderRedirect = this.renderRedirect.bind.this;
+    }
+    state = {
+        redirect:false
+    };
+
+    setRedirect = () => {
+        this.setState({
+            redirect: true
+        })
+    };
+
+    renderRedirect = () => {
+        if (this.state.redirect) {
+            return <Redirect to='/target' />
+        }
+    };
+
+    onSubmit(e){
+        e.preventDefault();
+        console.log(e.target);
+        let form = $(e.target);
+
+        let username = form.find("#register-username").val();
+        let email = form.find("#register-email").val();
+        let password = form.find("#register-password").val();
+        let password2 = form.find("#register-password2").val();
+        let terms = form.find("#register-terms").is(':checked');
+
+
+        {/*TODO improve password protection*/}
+        if (!terms){
+            Materialize.toast("Please accept the terms and conditions", 2000);
+        }else if(password === password2 && password !== "" && password2 !==""){
+            let userInfo = {
+                username: username,
+                email: email,
+                password: password
+            };
+
+            Accounts.createUser(userInfo, function(er){
+                if(er){
+                    Materialize.toast("Something went wrong while making your account", 2000);
+                } else{
+                    Meteor.loginWithPassword(email, password, function(er){
+                        if(er){
+                            Materialize.toast("Sorry, we failed to log you in", 2000);
+                        }else{
+                            console.log("success");
+                        }
+                    });
+                }
+            })
+
+        }else{
+            Materialize.toast("Password do not match!", 2000);
+        }
+    }
 
     render(){
+
         return(
             <div className={"container"}>
                 {/*[if IE 9]>         <html class="ie9 no-focus"> <![endif]*/}
                 {/*[if gt IE 9]><!*/}  {/*<![endif]*/}
-                <meta charSet="utf-8" />
+                {/*<meta charSet="utf-8" />
+*/}
+                {/* <title>OneUI - Admin Dashboard Template &amp; UI Framework</title>
 
-                <title>OneUI - Admin Dashboard Template &amp; UI Framework</title>
-
-                <meta name="description" content="OneUI - Admin Dashboard Template & UI Framework created by pixelcave and published on Themeforest" />
-                <meta name="author" content="pixelcave" />
-                <meta name="robots" content="noindex, nofollow" />
-                <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0" />
-
+            <meta name="description" content="OneUI - Admin Dashboard Template & UI Framework created by pixelcave and published on Themeforest" />
+            <meta name="author" content="pixelcave" />
+            <meta name="robots" content="noindex, nofollow" />
+            <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0" />
+*/}
                 {/* Stylesheets */}
                 {/* Web fonts */}
-                <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700" />
+                {/*
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400italic,600,700%7COpen+Sans:300,400,400italic,600,700" />
+*/}
 
                 {/* You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: */}
                 {/* <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> */}
                 {/* END Stylesheets */}
                 {/* Register Content */}
-
+                {/* Bootstrap and OneUI CSS framework */}
                 <div className="content overflow-hidden">
                     <div className="row">
                         <div className="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
@@ -34,7 +98,7 @@ export default class Register extends React.Component{
                                 <div className="block-header bg-success">
                                     <ul className="block-options">
                                         <li>
-                                            <a href="#" data-toggle="modal" data-target="#modal-terms">View Terms</a>
+                                            <a href="#modal-terms" data-toggle="modal" data-target="#modal-terms">View Terms</a>
                                         </li>
                                         <li>
                                             <a href="/login" data-toggle="tooltip" data-placement="left" title="Log In"><i className="si si-login" /></a>
@@ -50,11 +114,11 @@ export default class Register extends React.Component{
                                     {/* Register Form */}
                                     {/* jQuery Validation (.js-validation-register class is initialized in js/pages/base_pages_register.js) */}
                                     {/* For more examples you can check out https://github.com/jzaefferer/jquery-validation */}
-                                    <form className="js-validation-register form-horizontal push-50-t push-50" action="Register.jsx" method="post">
+                                    <form className="js-validation-register form-horizontal push-50-t push-50" onSubmit={this.onSubmit}>
                                         <div className="form-group">
                                             <div className="col-xs-12">
                                                 <div className="form-material form-material-success">
-                                                    <input className="form-control" type="text" id="register-username" name="register-username" placeholder="Please enter a username" />
+                                                    <input  className="form-control" type="text" id="register-username" name="register-username" placeholder="Please enter a username" />
                                                     <label htmlFor="register-username">Username</label>
                                                 </div>
                                             </div>
@@ -92,7 +156,7 @@ export default class Register extends React.Component{
                                         </div>
                                         <div className="form-group">
                                             <div className="col-xs-12 col-sm-6 col-md-5">
-                                                <button className="btn btn-block btn-success" type="submit"><i className="fa fa-plus pull-right" /> Sign Up</button>
+                                                <button className="btn btn-block btn-success" type="submit"> Sign Up</button>
                                             </div>
                                         </div>
                                     </form>
@@ -112,7 +176,7 @@ export default class Register extends React.Component{
                 {/* END Register Footer */}
 
                 {/* Terms Modal */}
-                <div className="modal fade" id="modal-terms" tabIndex={-1} role="dialog" aria-hidden="true">
+                <div  className="modal fade" id="modal-terms" tabIndex={"-1"} role="dialog" aria-hidden="true">
                     <div className="modal-dialog modal-dialog-popout">
                         <div className="modal-content">
                             <div className="block block-themed block-transparent remove-margin-b">
@@ -140,12 +204,14 @@ export default class Register extends React.Component{
                     </div>
                 </div>
                 {/* END Terms Modal */}
-
             </div>
 
 
 
         );
-    }
+        }
+
+
+
 
 }
