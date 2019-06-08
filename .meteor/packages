@@ -36,3 +36,5 @@ gadicc:blaze-react-component
 
 materialize:materialize@=0.97.0
 fourseven:scss
+accounts-base
+meteor
