@@ -1,7 +1,8 @@
 import React from 'react';
-import { Redirect, Route } from 'react-router-dom'
 import * as User from '../Models/user'
 import { Meteor } from 'meteor/meteor'
+import LoggedInNav from "./LoggedInNav";
+import LoggedOutNav from "./LoggedOutNav";
 
 let navStyle = {
     backgroundColor: "#3169b1",
@@ -38,21 +39,7 @@ export default class Header extends React.Component {
     }
 
     render() {
-        if (User.User.isLoggedIn()){
-            navOptions =(
-                <ul id="nav-mobile" className="right">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/logout">Logout</a></li>
-                </ul>
-            );
-        }else{
-            navOptions =(
-                <ul id="nav-mobile" className="right">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/login">Login</a></li>
-                </ul>
-            );
-        }
+        let navOptions = User.User.isLoggedIn() ? <LoggedInNav/>: <LoggedOutNav/>;
         return (
             <nav style={navStyle}>
                 <div className="nav-wrapper">

@@ -38,3 +38,7 @@ materialize:materialize@=0.97.0
 fourseven:scss
 accounts-base
 meteor
+accounts-google
+templating
+blaze
+service-configuration

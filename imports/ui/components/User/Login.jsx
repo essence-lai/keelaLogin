@@ -1,5 +1,6 @@
 import React from 'react';
-import { Redirect, Route } from 'react-router-dom'
+import { Redirect, Route } from 'react-router-dom';
+import setting from '../../../../settings';
 
 export default class Login extends React.Component{
     constructor(){
@@ -8,6 +9,22 @@ export default class Login extends React.Component{
             loggedIn: false
         };
         this.onSubmit = this.onSubmit.bind(this);
+        this.onOAuth = this.onOAuth.bind(this);
+    }
+
+    onOAuth(e){
+        e.preventDefault();
+        Meteor.loginWithGoogle(function(er){
+            if(er) {
+                console.log(er);
+                Materialize.toast(er.message, 2000);
+            } else{
+                console.log("do i get here");
+                this.setState({
+                    loggedIn: true
+                })
+            }
+        }.bind(this))
     }
 
     onSubmit(e){
@@ -108,10 +125,15 @@ export default class Login extends React.Component{
                                                 </div>
                                                 <div className="form-group">
                                                     <div className="col-xs-12 col-sm-6 col-md-4">
-                                                        <button className="btn btn-block btn-primary" type="submit">Log in</button>
+                                                        <button className="btn btn-block btn-primary left-align" type="submit">Log in</button>
                                                     </div>
                                                 </div>
                                             </form>
+                                            <div className="center-align">
+                                                <div className="col-xs-12 col-sm-6 col-md-4">
+                                                    <button className="btn btn-block btn-secondary" onClick={this.onOAuth}>Log in with Google </button>
+                                                </div>
+                                            </div>
                                             {/* END Login Form */}
                                         </div>
                                     </div>
