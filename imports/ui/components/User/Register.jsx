@@ -76,6 +76,7 @@ export default class Register extends React.Component{
                         {/* END Stylesheets */}
                         {/* Register Content */}
                         {/* Bootstrap and OneUI CSS framework */}
+                        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
                         <div className="content overflow-hidden">
                             <div className="row">
                                 <div className="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
@@ -87,7 +88,7 @@ export default class Register extends React.Component{
                                                     <a href="#modal-terms" data-toggle="modal" data-target="#modal-terms">View Terms</a>
                                                 </li>
                                                 <li>
-                                                    <a href="/login" data-toggle="tooltip" data-placement="left" title="Log In"><i className="si si-login" /></a>
+                                                    <a href="/login" data-toggle="tooltip" data-placement="left" title="Log In"><i className="material-icons tiny">launch</i></a>
                                                 </li>
                                             </ul>
                                             <h3 className="block-title">Register</h3>
@@ -142,7 +143,7 @@ export default class Register extends React.Component{
                                                 </div>
                                                 <div className="form-group">
                                                     <div className="col-xs-12 col-sm-6 col-md-5">
-                                                        <button className="btn btn-block btn-success" type="submit"> Sign Up</button>
+                                                        <button className="btn btn-block btn-success" type="submit"> <i className="material-icons center-align small pull-right">add</i>Sign Up</button>
                                                     </div>
                                                 </div>
                                             </form>
@@ -184,7 +185,7 @@ export default class Register extends React.Component{
                                     </div>
                                     <div className="modal-footer">
                                         <button className="btn btn-sm btn-default" type="button" data-dismiss="modal">Close</button>
-                                        <button className="btn btn-sm btn-primary" type="button" data-dismiss="modal"><i className="fa fa-check" /> I agree</button>
+                                        <button className="btn btn-sm btn-primary" type="button" data-dismiss="modal"><i className="material-icons">check</i> I agree</button>
                                     </div>
                                 </div>
                             </div>

@@ -5,6 +5,7 @@ import Header from '../components/Header/Header.jsx';
 import Home from '../pages/Home.jsx';
 import Register from '../components/User/Register'
 import Login from '../components/User/Login'
+import Personal from '../components/User/Personal'
 import Logout from '../components/Logout/Logout'
 import NotFound from '../pages/NotFound.jsx';
 import * as User from '../components/Models/user'
@@ -20,16 +21,16 @@ export default class MainLayout extends React.Component {
                         <Route exact path='/'
                                render={() => {
                                    if(User.User.isLoggedIn()){
-                                       return  <Home/>;
+                                       return  <Redirect push to ="/personal"/>;
                                    }else {
-                                       return <Redirect push to="/register"/>;
+                                       return <Home/>;
                                    }
                                }}
                         />
                         <Route exact path='/register'
                                render={() => {
                                    if(User.User.isLoggedIn()){
-                                       return  <Redirect push to="/"/>;
+                                       return  <Redirect push to="/personal"/>;
                                    }else {
                                        return <Register/>;
                                    }
@@ -38,7 +39,7 @@ export default class MainLayout extends React.Component {
                         <Route exact path='/login'
                                render={() => {
                                    if(User.User.isLoggedIn()){
-                                       return  <Redirect push to="/"/>;
+                                       return  <Redirect push to="/personal"/>;
                                    }else {
                                        return <Login/>;
                                    }
@@ -49,7 +50,16 @@ export default class MainLayout extends React.Component {
                                    if(User.User.isLoggedIn()){
                                        return  <Logout/>;
                                    }else {
-                                       return <Redirect push to='/'/>
+                                       return <Redirect push to="/"/>
+                                   }
+                               }}
+                        />
+                        <Route exact path='/personal'
+                               render={() => {
+                                   if(User.User.isLoggedIn()){
+                                       return  <Personal/>;
+                                   }else {
+                                       return <Redirect push to="/"/>;
                                    }
                                }}
                         />

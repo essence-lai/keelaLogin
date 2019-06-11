@@ -50,7 +50,7 @@ export default class Login extends React.Component{
         return(
             <Route path="/login" render={() => (
                 this.state.loggedIn? (
-                    <Redirect exact push to="/"/>
+                    <Redirect exact push to="/personal"/>
                 ):(
                     <div className={"container"}>
                         {/*[if IE 9]>         <html class="ie9 no-focus"> <![endif]*/}
@@ -73,7 +73,7 @@ export default class Login extends React.Component{
                         {/* <link rel="stylesheet" id="css-theme" href="assets/css/themes/flat.min.css"> */}
                         {/* END Stylesheets */}
                         {/* Bootstrap and OneUI CSS framework */}
-
+                        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
                         {/* Login Content */}
                         <div className="content overflow-hidden">
                             <div className="row">
@@ -86,7 +86,7 @@ export default class Login extends React.Component{
                                                     <a href="\register">Forgot Password?</a>
                                                 </li>
                                                 <li>
-                                                    <a href="\register" data-toggle="tooltip" data-placement="left" title="New Account"><i className="si si-plus" /></a>
+                                                    <a href="\register" data-toggle="tooltip" data-placement="left" title="New Account"><i className="material-icons tiny">add</i></a>
                                                 </li>
                                             </ul>
                                             <h3 className="block-title">Login</h3>
@@ -125,7 +125,8 @@ export default class Login extends React.Component{
                                                 </div>
                                                 <div className="form-group">
                                                     <div className="col-xs-12 col-sm-6 col-md-4">
-                                                        <button className="btn btn-block btn-primary left-align" type="submit">Log in</button>
+                                                        <button className="btn btn-block btn-primary left-align" type="submit">
+                                                            <i className="material-icons pull-right">launch</i>Log in</button>
                                                     </div>
                                                 </div>
                                             </form>
