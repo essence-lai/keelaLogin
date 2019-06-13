@@ -24,5 +24,20 @@ export const User = {
 
     create: function(opts, callback) {
         Accounts.createUser(opts, callback);
-    }
+    },
+
+    email: function() {
+        let service = User.get() && User.get().services ? User.get().services.google.email : "";
+        return service;
+    },
+
+    firstName: function(){
+        let service = User.get() && User.get().services ? User.get().services.google.given_name : "";
+        return service;
+    },
+
+    lastName: function(){
+        let service = User.get() && User.get().services ? User.get().services.google.family_name : "";
+        return service;
+    },
 };

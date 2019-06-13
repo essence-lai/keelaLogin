@@ -1,5 +1,5 @@
 import React from 'react';
-import * as User from '../Models/user'
+import { User } from '../Models/user'
 import { Meteor } from 'meteor/meteor'
 import LoggedInNav from "./LoggedInNav";
 import LoggedOutNav from "./LoggedOutNav";
@@ -10,14 +10,12 @@ let navStyle = {
     paddingRight: "18px"
 };
 
-let navOptions;
-
 
 export default class Header extends React.Component {
     constructor(){
         super();
         this.state = {
-            loggedIn: User.User.isLoggedIn()
+            loggedIn: User.isLoggedIn()
         };
         this.logOut = this.logOut.bind(this);
 
@@ -39,7 +37,7 @@ export default class Header extends React.Component {
     }
 
     render() {
-        let navOptions = User.User.isLoggedIn() ? <LoggedInNav/>: <LoggedOutNav/>;
+        let navOptions = User.isLoggedIn() ? <LoggedInNav/>: <LoggedOutNav/>;
         return (
             <nav style={navStyle}>
                 <div className="nav-wrapper">

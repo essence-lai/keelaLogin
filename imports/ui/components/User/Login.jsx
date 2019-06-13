@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
-import setting from '../../../../settings';
+import {User} from "../Models/user";
 
 export default class Login extends React.Component{
     constructor(){
@@ -19,7 +19,17 @@ export default class Login extends React.Component{
                 console.log(er);
                 Materialize.toast(er.message, 2000);
             } else{
-                console.log("do i get here");
+                let firstName = User.profile().firstName|| User.firstName()||"";
+                let lastName = User.profile().lastName|| User.lastName()||"";
+                let email = User.profile().email|| User.email()||"";
+
+                Meteor.users.update({_id: Meteor.userId()},{
+                    $set:{
+                        'profile.email': email,
+                        'profile.firstName': firstName,
+                        'profile.lastName': lastName
+                    }
+                });
                 this.setState({
                     loggedIn: true
                 })
@@ -33,7 +43,8 @@ export default class Login extends React.Component{
 
         let username = form.find("#login-username").val();
         let password = form.find("#login-password").val();
-        let rememberMe = form.find("#login-remember-me").is(':checked');
+        {/*TODO: develop a remember Me function*/}
+        // let rememberMe = form.find("#login-remember-me").is(':checked');
 
         //Login with Password
         Meteor.loginWithPassword( username, password, function(er){
