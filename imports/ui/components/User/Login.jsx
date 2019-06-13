@@ -16,7 +16,6 @@ export default class Login extends React.Component{
         e.preventDefault();
         Meteor.loginWithGoogle(function(er){
             if(er) {
-                console.log(er);
                 Materialize.toast(er.message, 2000);
             } else{
                 let firstName = User.profile().firstName|| User.firstName()||"";

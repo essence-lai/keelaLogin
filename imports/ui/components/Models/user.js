@@ -40,4 +40,10 @@ export const User = {
         let service = User.get() && User.get().services ? User.get().services.google.family_name : "";
         return service;
     },
+
+    emails: function() {
+        let service = User.get() && User.get().emails ? User.get().emails[0].address : "";
+        return service;
+    },
+
 };

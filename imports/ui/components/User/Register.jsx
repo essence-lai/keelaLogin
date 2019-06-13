@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom'
+import { User } from "../Models/user";
 
 export default class Register extends React.Component{
     constructor(){
@@ -35,6 +36,12 @@ export default class Register extends React.Component{
                 if(er){
                     Materialize.toast(er.reason, 2000);
                 } else{
+                    let email = User.emails() || "";
+                    Meteor.users.update({_id: Meteor.userId()},{
+                        $set:{
+                            'profile.email': email
+                        }
+                    });
                     this.setState({
                         loggedIn: true
                     })
