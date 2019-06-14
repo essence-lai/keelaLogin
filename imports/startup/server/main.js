@@ -14,3 +14,4 @@ ServiceConfiguration.configurations.upsert(
     }
 );
 
+export const Teams = new Mongo.Collection('teams');
