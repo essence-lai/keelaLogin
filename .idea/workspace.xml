@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a124f1b-9b14-435c-849f-60019d1c4e3d" name="Default" comment="Got creating and viewing team, added teams to profile">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/oneui.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/oneui.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/Simple-Line-Icons.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/Simple-Line-Icons.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/Simple-Line-Icons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/Simple-Line-Icons.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.woff2" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -152,8 +148,8 @@
       <file leaf-file-name="oneui.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/oneui.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="2194" column="38" selection-start-line="2194" selection-start-column="38" selection-end-line="2194" selection-end-column="38" />
+            <state relative-caret-position="202">
+              <caret line="2188" column="21" lean-forward="true" selection-start-line="2188" selection-start-column="21" selection-end-line="2188" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -213,7 +209,12 @@
       <find>bg-</find>
       <find>simpl</find>
       <find>fontawesome</find>
+      <find>favico</find>
+      <find>Fontawesome</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -1896,12 +1897,6 @@
             <path>
               <item name="keelaLogin" type="b2602c69:ProjectViewProjectNode" />
               <item name="keelaLogin" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="fonts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="keelaLogin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="keelaLogin" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -2101,7 +2096,7 @@
       <workItem from="1560371870471" duration="20758000" />
       <workItem from="1560440770539" duration="2363000" />
       <workItem from="1560453769451" duration="16466000" />
-      <workItem from="1560543750376" duration="25652000" />
+      <workItem from="1560543750376" duration="26074000" />
     </task>
     <task id="LOCAL-00001" summary="setup basic templates no working functions of Login and Register">
       <created>1559786769051</created>
@@ -2163,7 +2158,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151423000" />
+    <option name="totallyTimeSpent" value="151845000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2194,6 +2189,7 @@
       <window_info id="Designer" order="3" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30743983" />
       <window_info anchor="right" id="Database" order="6" visible="true" weight="0.025164114" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32982087" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -2205,7 +2201,6 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32982087" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -2476,8 +2471,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/oneui.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="2194" column="38" selection-start-line="2194" selection-start-column="38" selection-end-line="2194" selection-end-column="38" />
+        <state relative-caret-position="202">
+          <caret line="2188" column="21" lean-forward="true" selection-start-line="2188" selection-start-column="21" selection-end-line="2188" selection-end-column="21" />
         </state>
       </provider>
     </entry>
