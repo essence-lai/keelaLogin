@@ -2,22 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a124f1b-9b14-435c-849f-60019d1c4e3d" name="Default" comment="Got creating and viewing team, added teams to profile">
-      <change afterPath="$PROJECT_DIR$/assets/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Simple-Line-Icons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Simple-Line-Icons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Simple-Line-Icons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Simple-Line-Icons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/oneui.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/oneui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/Simple-Line-Icons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/Simple-Line-Icons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/Simple-Line-Icons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/Simple-Line-Icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,7 +44,7 @@
               <entry file="file://$PROJECT_DIR$/imports/ui/components/User/Login.jsx">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="-578">
-                    <caret line="89" column="74" lean-forward="true" selection-start-line="89" selection-start-column="74" selection-end-line="89" selection-end-column="74" />
+                    <caret line="89" column="74" selection-start-line="89" selection-start-column="74" selection-end-line="89" selection-end-column="74" />
                     <folding>
                       <element signature="e#0#26#0" expanded="true" />
                     </folding>
@@ -88,11 +83,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Register.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Register.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/components/User/Register.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
-              <caret line="100" column="85" lean-forward="true" selection-start-line="100" selection-start-column="85" selection-end-line="100" selection-end-column="85" />
+              <caret line="100" column="85" selection-start-line="100" selection-start-column="85" selection-end-line="100" selection-end-column="85" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -154,27 +149,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="oneui.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="oneui.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/oneui.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="6143" column="2" selection-start-line="6143" selection-start-column="2" selection-end-line="6143" selection-end-column="2" />
-              <folding>
-                <element signature="e#80238#80618#0" />
-                <element signature="e#80832#80898#0" />
-                <element signature="e#80922#80945#0" />
-                <element signature="e#80969#80992#0" />
-                <element signature="e#81019#81042#0" />
-                <element signature="e#81068#81091#0" />
-                <element signature="e#81110#81133#0" />
-                <element signature="e#81163#81186#0" />
-                <element signature="e#81213#81236#0" />
-                <element signature="e#81254#81277#0" />
-                <element signature="e#81298#81321#0" />
-                <element signature="e#81343#81366#0" />
-                <element signature="e#81384#81407#0" />
-                <element signature="e#81426#81449#0" />
-              </folding>
+            <state relative-caret-position="270">
+              <caret line="2194" column="38" selection-start-line="2194" selection-start-column="38" selection-end-line="2194" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -220,7 +199,6 @@
       <find>fonts</find>
       <find>&lt;!DOCTYP</find>
       <find>simple-lines</find>
-      <find>fontawesome</find>
       <find>si</find>
       <find>fontawesom</find>
       <find>onSubmit</find>
@@ -233,6 +211,8 @@
       <find>insecur</find>
       <find>email</find>
       <find>bg-</find>
+      <find>simpl</find>
+      <find>fontawesome</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -280,13 +260,13 @@
         <option value="$PROJECT_DIR$/imports/ui/components/Teams/TeamCard.jsx" />
         <option value="$PROJECT_DIR$/imports/startup/server/teams.js" />
         <option value="$PROJECT_DIR$/imports/startup/client/app.jsx" />
-        <option value="$PROJECT_DIR$/assets/css/oneui.css" />
         <option value="$PROJECT_DIR$/imports/startup/server/main.js" />
         <option value="$PROJECT_DIR$/imports/ui/components/Teams/Teams.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/components/User/Personal.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/components/Teams/TeamsCards.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/components/Teams/CreateTeam.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/components/User/Login.jsx" />
+        <option value="$PROJECT_DIR$/assets/css/oneui.css" />
       </list>
     </option>
   </component>
@@ -1916,6 +1896,12 @@
             <path>
               <item name="keelaLogin" type="b2602c69:ProjectViewProjectNode" />
               <item name="keelaLogin" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="fonts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="keelaLogin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="keelaLogin" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -2115,7 +2101,7 @@
       <workItem from="1560371870471" duration="20758000" />
       <workItem from="1560440770539" duration="2363000" />
       <workItem from="1560453769451" duration="16466000" />
-      <workItem from="1560543750376" duration="24811000" />
+      <workItem from="1560543750376" duration="25652000" />
     </task>
     <task id="LOCAL-00001" summary="setup basic templates no working functions of Login and Register">
       <created>1559786769051</created>
@@ -2177,7 +2163,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150582000" />
+    <option name="totallyTimeSpent" value="151423000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2190,6 +2176,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1087" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32982087" />
@@ -2430,29 +2417,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/oneui.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="6143" column="2" selection-start-line="6143" selection-start-column="2" selection-end-line="6143" selection-end-column="2" />
-          <folding>
-            <element signature="e#80238#80618#0" />
-            <element signature="e#80832#80898#0" />
-            <element signature="e#80922#80945#0" />
-            <element signature="e#80969#80992#0" />
-            <element signature="e#81019#81042#0" />
-            <element signature="e#81068#81091#0" />
-            <element signature="e#81110#81133#0" />
-            <element signature="e#81163#81186#0" />
-            <element signature="e#81213#81236#0" />
-            <element signature="e#81254#81277#0" />
-            <element signature="e#81298#81321#0" />
-            <element signature="e#81343#81366#0" />
-            <element signature="e#81384#81407#0" />
-            <element signature="e#81426#81449#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/components/User/Personal.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="31">
@@ -2486,7 +2450,7 @@
     <entry file="file://$PROJECT_DIR$/imports/ui/components/User/Login.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-578">
-          <caret line="89" column="74" lean-forward="true" selection-start-line="89" selection-start-column="74" selection-end-line="89" selection-end-column="74" />
+          <caret line="89" column="74" selection-start-line="89" selection-start-column="74" selection-end-line="89" selection-end-column="74" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -2503,10 +2467,17 @@
     <entry file="file://$PROJECT_DIR$/imports/ui/components/User/Register.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
-          <caret line="100" column="85" lean-forward="true" selection-start-line="100" selection-start-column="85" selection-end-line="100" selection-end-column="85" />
+          <caret line="100" column="85" selection-start-line="100" selection-start-column="85" selection-end-line="100" selection-end-column="85" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/oneui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="2194" column="38" selection-start-line="2194" selection-start-column="38" selection-end-line="2194" selection-end-column="38" />
         </state>
       </provider>
     </entry>
