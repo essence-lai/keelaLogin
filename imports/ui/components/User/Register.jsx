@@ -1,12 +1,14 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom'
 import { User } from "../Models/user";
+import Modal from '../Modal/Modal'
 
 export default class Register extends React.Component{
     constructor(){
         super();
         this.state = {
-            loggedIn: false
+            loggedIn: false,
+            showModal: false
         };
         this.onSubmit = this.onSubmit.bind(this);
     }
@@ -53,6 +55,7 @@ export default class Register extends React.Component{
         }
     }
 
+
     render(){
 
         return(
@@ -92,7 +95,7 @@ export default class Register extends React.Component{
                                         <div className="block-header bg-success">
                                             <ul className="block-options">
                                                 <li>
-                                                    <a href="#modal-terms" data-toggle="modal" data-target="#modal-terms">View Terms</a>
+                                                    <button className="waves-effect waves-light" onClick={this.toggleModal}>View Terms</button>
                                                 </li>
                                                 <li>
                                                     <a href="/login" data-toggle="tooltip" data-placement="left" title="Log In"><i className="material-icons tiny">launch</i></a>
@@ -168,9 +171,8 @@ export default class Register extends React.Component{
                             <small className="text-muted font-w600"><span className="js-year-copy" /> © OneUI 1.3</small>
                         </div>
                         {/* END Register Footer */}
-
                         {/* Terms Modal */}
-                        <div  className="modal fade" id="modal-terms" tabIndex={"-1"} role="dialog" aria-hidden="true">
+                        <div  className="modal" id="modal-terms" >
                             <div className="modal-dialog modal-dialog-popout">
                                 <div className="modal-content">
                                     <div className="block block-themed block-transparent remove-margin-b">
