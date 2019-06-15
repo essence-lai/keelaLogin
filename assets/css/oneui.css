@@ -11194,3 +11194,10 @@ div.tagsinput span.tag a:hover {
   padding-top: 6px;
   padding-bottom: 6px;
 }
+
+
+.teams-card-padding{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 10px 10px 10px 10px
+}

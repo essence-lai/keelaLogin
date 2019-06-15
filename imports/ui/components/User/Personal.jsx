@@ -1,5 +1,5 @@
 import React from 'react';
-import { User } from "../Models/user";
+import TeamsCards from "../Teams/TeamsCards";
 
 
 export default class Personal extends React.Component{
@@ -9,7 +9,8 @@ export default class Personal extends React.Component{
             editable: false,
             email: "",
             firstName: "",
-            lastName: ""
+            lastName: "",
+            teams: []
         };
 
         this.onEdit = this.onEdit.bind(this);
@@ -29,7 +30,21 @@ export default class Personal extends React.Component{
                     email,
                     firstName,
                     lastName
-                })
+                });
+
+                Meteor.call('findTeams',{"members": Meteor.user()._id},function(er, result){
+                    if(er){
+                        Materialize.toast(er.reason, 2000);
+                    }else{
+                        console.log(result);
+                        result = result.map((item) => {
+                            return item
+                        });
+                        this.setState({
+                            teams: result
+                        })
+                    }
+                }.bind(this));
             }
 
         })
@@ -79,6 +94,11 @@ export default class Personal extends React.Component{
 
 
     render(){
+        const collectionData = this.state.teams.map((item, key) =>{
+                return <TeamsCards name={item.name} members={item.members} key={key}/>
+            }
+        );
+
         return(
            <div className={"container"}>
                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
@@ -127,6 +147,23 @@ export default class Personal extends React.Component{
 
                                                    }
                                                    <label htmlFor="email">Email</label>
+                                               </div>
+                                           </div>
+                                       </div>
+                                       <div className="col-xs-12">
+                                           <div className="form-material form-material-primary">
+                                               <div className="collection col-xs-12">
+                                                   <div className="row list-padding bg-amethyst-light">
+                                                       <div className="col s5 center-align">
+                                                           <h5>Team Name</h5>
+                                                       </div>
+                                                       <div className="col s7 center-align">
+                                                           <h5>Members</h5>
+                                                       </div>
+                                                   </div>
+                                                   {
+                                                       collectionData
+                                                   }
                                                </div>
                                            </div>
                                        </div>

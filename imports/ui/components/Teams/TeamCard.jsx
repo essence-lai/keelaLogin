@@ -12,9 +12,8 @@ export default class TeamCard extends React.Component{
 
     onCheck(){
         this.setState({
-            checked: !this.state.checked
+          checked: this.props.onCheck(this.state.checked, this.props.member)
         })
-
 
     }
     render(){
@@ -28,7 +27,8 @@ export default class TeamCard extends React.Component{
                         <h6>{this.props.member.profile.lastName}</h6>
                     </div>
                     <div className="col s2 pull-right">
-                        <input type="checkbox" id={this.props.member._id} onClick={this.onCheck} />
+                        <input type="checkbox" id={this.props.member._id}
+                               onClick={this.onCheck} />
                         {
                             this.state.checked?
                                 <label htmlFor={this.props.member._id}>remove</label>

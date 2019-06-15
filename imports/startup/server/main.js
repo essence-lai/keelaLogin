@@ -14,4 +14,15 @@ ServiceConfiguration.configurations.upsert(
     }
 );
 
-export const Teams = new Mongo.Collection('teams');
+
+
+const Teams = new Mongo.Collection('teams');
+
+Meteor.methods({
+   newTeam: function(post, callback){
+       Teams.insert(post, callback)
+   },
+    findTeams: function(post){
+       return Teams.find(post).fetch()
+    }
+});

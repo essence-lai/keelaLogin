@@ -93,10 +93,10 @@ export default class Login extends React.Component{
                                         <div className="block-header bg-primary">
                                             <ul className="block-options">
                                                 <li>
-                                                    <a href="\register">Forgot Password?</a>
+                                                    <a href="/register">Forgot Password?</a>
                                                 </li>
                                                 <li>
-                                                    <a href="\register" data-toggle="tooltip" data-placement="left" title="New Account"><i className="material-icons tiny">add</i></a>
+                                                    <a href="/register" data-toggle="tooltip" data-placement="left" title="New Account"><i className="material-icons tiny">add</i></a>
                                                 </li>
                                             </ul>
                                             <h3 className="block-title">Login</h3>
