@@ -1,7 +1,6 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom'
 import { User } from "../Models/user";
-import Modal from '../Modal/Modal'
 
 export default class Register extends React.Component{
     constructor(){
