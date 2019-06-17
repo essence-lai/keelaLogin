@@ -111,7 +111,7 @@ export default class Personal extends React.Component{
                                    <h3 className="block-title">Personal</h3>
                                </div>
                                <div className="block-content block-content-full block-content-narrow">
-                                   <form className="s-validation-register form-horizontal push-50-t push-50" onSubmit={this.onSubmit}>
+                                   <form className="js-validation-register form-horizontal push-50-t push-50" onSubmit={this.onSubmit}>
                                        <div className="form-group">
                                            <div className="col-xs-12">
                                                <div className="form-material form-material-primary">

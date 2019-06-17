@@ -1,16 +1,27 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom'
 import { User } from "../Models/user";
+import Modal from '../Modal/Modal'
 
 export default class Register extends React.Component{
     constructor(){
         super();
         this.state = {
             loggedIn: false,
-            showModal: false
+            showModal: false,
+            terms: false,
         };
         this.onSubmit = this.onSubmit.bind(this);
+        this.onAgree = this.onAgree.bind(this);
+        this.toggle = this.toggle.bind(this);
     }
+
+    onAgree(){
+        this.setState({
+            terms: true
+        })
+    }
+
 
     onSubmit(e){
         e.preventDefault();
@@ -54,6 +65,13 @@ export default class Register extends React.Component{
         }
     }
 
+    toggle(){
+        this.setState({
+            terms: !this.state.terms
+        })
+    }
+
+
 
     render(){
 
@@ -94,7 +112,12 @@ export default class Register extends React.Component{
                                         <div className="block-header bg-success">
                                             <ul className="block-options">
                                                 <li>
-                                                    <button className="waves-effect waves-light" onClick={this.toggleModal}>View Terms</button>
+                                                    <a
+                                                        className="waves-effect waves-light modal-trigger"
+                                                        data-target="modal1"
+                                                    >
+                                                        View Terms
+                                                    </a>
                                                 </li>
                                                 <li>
                                                     <a href="/login" data-toggle="tooltip" data-placement="left" title="Log In"><i className="material-icons tiny">launch</i></a>
@@ -145,8 +168,8 @@ export default class Register extends React.Component{
                                                 </div>
                                                 <div className="form-group">
                                                     <div className="col-xs-12">
-                                                        <label className="css-input switch switch-sm switch-success">
-                                                            <input type="checkbox" id="register-terms" name="register-terms" /><span /> I agree with terms &amp; conditions
+                                                        <label htmlFor="register-terms" className="css-input switch switch-sm switch-success">
+                                                            <input type="checkbox" checked={!!this.state.terms} onChange={this.toggle} id="register-terms" name="register-terms" /><span/> I agree with terms &amp; conditions
                                                         </label>
                                                     </div>
                                                 </div>
@@ -171,34 +194,8 @@ export default class Register extends React.Component{
                         </div>
                         {/* END Register Footer */}
                         {/* Terms Modal */}
-                        <div  className="modal" id="modal-terms" >
-                            <div className="modal-dialog modal-dialog-popout">
-                                <div className="modal-content">
-                                    <div className="block block-themed block-transparent remove-margin-b">
-                                        <div className="block-header bg-primary-dark">
-                                            <ul className="block-options">
-                                                <li>
-                                                    <button data-dismiss="modal" type="button"><i className="si si-close" /></button>
-                                                </li>
-                                            </ul>
-                                            <h3 className="block-title">Terms &amp; Conditions</h3>
-                                        </div>
-                                        <div className="block-content">
-                                            <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
-                                            <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
-                                            <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
-                                            <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
-                                            <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
-                                        </div>
-                                    </div>
-                                    <div className="modal-footer">
-                                        <button className="btn btn-sm btn-default" type="button" data-dismiss="modal">Close</button>
-                                        <button className="btn btn-sm btn-primary" type="button" data-dismiss="modal"><i className="material-icons">check</i> I agree</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {/* END Terms Modal */}
+                        <Modal onAgree={this.onAgree}/>
+                        {/* End Terms Modal */}
                     </div>
                 )
             )}/>

@@ -93,7 +93,7 @@ export default class Login extends React.Component{
                                         <div className="block-header bg-primary">
                                             <ul className="block-options">
                                                 <li>
-                                                    <a href="/register">Forgot Password?</a>
+                                                    <a href="/register">Register User?</a>
                                                 </li>
                                                 <li>
                                                     <a href="/register" data-toggle="tooltip" data-placement="left" title="New Account"><i className="material-icons tiny">add</i></a>
@@ -109,7 +109,7 @@ export default class Login extends React.Component{
                                             {/* Login Form */}
                                             {/* jQuery Validation (.js-validation-login class is initialized in js/pages/base_pages_login.js) */}
                                             {/* For more examples you can check out https://github.com/jzaefferer/jquery-validation */}
-                                            <form className="js-validation-login form-horizontal push-30-t push-50" onSubmit={this.onSubmit}>
+                                            <form className="js-validation-register form-horizontal push-30-t push-50" onSubmit={this.onSubmit}>
                                                 <div className="form-group">
                                                     <div className="col-xs-12">
                                                         <div className="form-material form-material-primary">
@@ -126,13 +126,14 @@ export default class Login extends React.Component{
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="form-group">
-                                                    <div className="col-xs-12">
-                                                        <label className="css-input switch switch-sm switch-primary">
-                                                            <input type="checkbox" id="login-remember-me" name="login-remember-me" /><span /> Remember Me?
-                                                        </label>
-                                                    </div>
-                                                </div>
+                                                {/* TODO create remember me funcitonality*/}
+                                                {/*<div className="form-group">*/}
+                                                    {/*<div className="col-xs-12">*/}
+                                                        {/*<label className="css-input switch switch-sm switch-primary">*/}
+                                                            {/*<input type="checkbox" id="login-remember-me" name="login-remember-me" /><span /> Remember Me?*/}
+                                                        {/*</label>*/}
+                                                    {/*</div>*/}
+                                                {/*</div>*/}
                                                 <div className="form-group">
                                                     <div className="col-xs-12 col-sm-6 col-md-4">
                                                         <button className="btn btn-block btn-primary left-align" type="submit">
