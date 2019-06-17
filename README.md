@@ -25,13 +25,13 @@ views when logged in.</h5>
 
 ![Image of google Oauth](https://user-images.githubusercontent.com/22875217/59573540-547d3100-9068-11e9-8531-f195a98cd7ff.PNG)
 
-<h2>View and Creating Teams</h2>
+<h5>View and Creating Teams</h5>
 
 ![Image of Teams](https://user-images.githubusercontent.com/22875217/59573618-b76ec800-9068-11e9-85aa-c6051f00f7b5.PNG)
 
-<h2> Data structure
-The Data structure is very simple structure using meteors accounts-ui 
-as the base for users and teams which is an aggregation 
+<h2> Data structure</h2>
+<h5>The Data structure is very simple structure using meteors accounts-ui 
+as the base for users and teams which is an aggregation </h5>
 
 ![Image a data](https://user-images.githubusercontent.com/22875217/59574861-b9875580-906d-11e9-95d2-4bfe178bab96.PNG)
 
@@ -50,6 +50,6 @@ to be the most confusing to end up having to implement it via react npm instead 
 
 <h5>Testing is also very important, so I would implement some unit tests via JEST.</h5>
 
-<h5>I would also improve the could to utilize more of React Component Design Pattern, 
-many of the components were reasoned and can be refactored to have more beautiful code.
+<h5>I would also improve the code structure to utilize more of React Component Design Pattern, 
+many of the components were reused and can be refactored.
 </h5>
