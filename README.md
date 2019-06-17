@@ -46,6 +46,9 @@ to be the most confusing to end up having to implement it via react npm instead 
 
 #<h2> What would I continue to work on
 
-I would create a stronger authentication system. As for presentation purposes it allows any non-secure password. 
+I would create a stronger authentication system. As for presentation purposes it allows any non-secure password. And it does not auto log gout 
 
 Testing is also very important, so I would implement some unit tests via JEST.
+
+I would also improve the could to utilize more of React Component Design Pattern, 
+many of the components were reasoned and can be refactored to have more beautiful code.
