@@ -23,6 +23,6 @@ Meteor.methods({
        Teams.insert(post, callback)
    },
     findTeams: function(post){
-       return Teams.find(post).fetch()
+       return Teams.findOne(post).fetch()
     }
 });
