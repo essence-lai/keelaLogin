@@ -95,7 +95,7 @@ export default class Personal extends React.Component{
 
     render(){
         const collectionData = this.state.teams.map((item, key) =>{
-                return <TeamsCards name={item.name} members={item.members} key={key}/>
+                <TeamsCards name={item.name} members={item.members} key={key}/>
             }
         );
 
