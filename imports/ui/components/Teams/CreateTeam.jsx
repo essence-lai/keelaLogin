@@ -57,7 +57,9 @@ export default class CreateTeam extends React.Component{
 
     onSubmit(e){
         e.preventDefault();
-        if(this.state.teamMembers.length === 0){
+        if(this.state.teamName=== ""){
+            Materialize.toast("Please Enter a Team Name", 2000);
+        }else if(this.state.teamMembers.length === 0){
             Materialize.toast("Please Select Some Team Members", 2000);
         }else if (!this.state.teamMembers.includes(User.id())){
             Materialize.toast("You Must Select Yourself To Create a Team", 2000);
