@@ -32,11 +32,10 @@ export default class Personal extends React.Component{
                     lastName
                 });
 
-                Meteor.call('findTeams',{"members": Meteor.user()._id},function(er, result){
+                Meteor.call('findTeams',{ "members" : Meteor.user()._id},function(er, result){
                     if(er){
                         Materialize.toast(er.reason, 2000);
                     }else{
-                        console.log(result);
                         result = result.map((item) => {
                             return item
                         });
@@ -95,7 +94,7 @@ export default class Personal extends React.Component{
 
     render(){
         const collectionData = this.state.teams.map((item, key) =>{
-                <TeamsCards name={item.name} members={item.members} key={key}/>
+                return <TeamsCards name={item.name} members={item.members} key={key}/>
             }
         );
 
