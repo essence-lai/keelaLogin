@@ -48,7 +48,7 @@ export default class Register extends React.Component{
                 if(er){
                     Materialize.toast(er.reason, 2000);
                 } else{
-                    let email = User.emails() || "";
+                    let email = User.emails || "";
                     Meteor.users.update({_id: Meteor.userId()},{
                         $set:{
                             'profile.email': email
