@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.3.4",
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "classnames": "^2.2.5",
     "history": "^3.0.0",
     "materialize-css": "^1.0.0",
